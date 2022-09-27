@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/largent-walk-right.png-3b4bc99e1b859c35ad731f9dd867357e.stex"
+path="res://.import/tileBlue_06.png-b021b99f6ebd83d77d566807277924af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/largent-walk-right.png"
-dest_files=[ "res://.import/largent-walk-right.png-3b4bc99e1b859c35ad731f9dd867357e.stex" ]
+source_file="res://sprites/tileBlue_06.png"
+dest_files=[ "res://.import/tileBlue_06.png-b021b99f6ebd83d77d566807277924af.stex" ]
 
 [params]
 
