@@ -1,7 +1,7 @@
 # Project 2: Platformer Game
 
 ##Instructions
-Lorem Ipsum
+Use the left and right arrow keys to move left and right. Use the up arrow key to jump.
 
 ## Third Party Assets
 - [Kenney's Abstract Platformer Pack](https://www.kenney.nl/assets/abstract-platformer)
@@ -19,9 +19,9 @@ Lorem Ipsum
 - [x] C-3: You have a clear legal right to use all incorporated assets, the licenses for all third-party assets are tracked in the <code>README.md</code> file, and you have satisfied all license requirements.
 - [ ] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game.
 - [x] C-5: The game includes a player-controlled character, implemented as a <code>KinematicBody2D</code> and positioned in a conventional, <code>TileMap</code>-based, 2D-platforming world.
-- [ ] C-6: The player's character can move left and right, with its movement bounded by impassable tiles.
-- [ ] C-7: The player's character can jump up and onto tiles.
-- [ ] C-8: The player's character falls down when walking off a ledge.
+- [x] C-6: The player's character can move left and right, with its movement bounded by impassable tiles.
+- [x] C-7: The player's character can jump up and onto tiles.
+- [x] C-8: The player's character falls down when walking off a ledge.
 - [ ] B-1: The project report is complete.
 - [ ] B-2: The source code and project structure comply with <a href="https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/">our adopted guidelines</a>.
 - [ ] B-3: There is a sprite element in the level that the player can interact with, such as a collectible, an enemy, a book, or a switch.
