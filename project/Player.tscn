@@ -42,4 +42,3 @@ shape = SubResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
 animation = "Player_walk_large"
-frame = 3

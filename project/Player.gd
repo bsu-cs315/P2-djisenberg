@@ -4,14 +4,12 @@ var _velocity := Vector2.ZERO
 var _speed := 150
 var _gravity := 600
 var _jump_impulse := 300
-# Called when the node enters the scene tree for the first time.
+
+onready var _sprite := find_node("AnimatedSprite")
+
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _physics_process(delta):
@@ -31,3 +29,15 @@ func _physics_process(delta):
 	
 # warning-ignore:return_value_discarded	
 	move_and_slide(_velocity, Vector2.UP)
+	
+	
+	if not _velocity.x == 0:
+		_sprite.playing = true
+	else:
+		_sprite.playing = false
+		_sprite.frame = 0
+	
+	if input.x < 0:
+		_sprite.scale.x = -1
+	elif input.x > 0:
+		_sprite.scale.x =1
