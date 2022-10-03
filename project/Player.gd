@@ -11,7 +11,6 @@ func _ready():
 	pass
 
 
-
 func _physics_process(delta):
 	var input := Vector2.ZERO
 	input.x = Input.get_axis("move_left", "move_right")

@@ -8,28 +8,28 @@ extents = Vector2( 10.5, 36 )
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 24, 72 )
+region = Rect2( 0, 0, 23, 72 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 24, 0, 24, 72 )
+region = Rect2( 24, 0, 23, 72 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 48, 0, 24, 72 )
+region = Rect2( 48, 0, 23, 72 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 72, 0, 24, 72 )
+region = Rect2( 72, 0, 23, 72 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
-"name": "Player_walk_large",
+"name": "Player_walk",
 "speed": 5.0
 } ]
 
@@ -41,4 +41,4 @@ shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-animation = "Player_walk_large"
+animation = "Player_walk"
