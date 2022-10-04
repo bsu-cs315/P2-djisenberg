@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-var _velocity := Vector2.ZERO
-var _speed := 150
-var _gravity := 600
-var _jump_impulse := 300
-var _laser = preload("res://Laser.tscn")
-var _laserActive = false
-var _laserTimer = 0
+var _velocity : Vector2 = Vector2.ZERO
+var _speed : int = 150
+var _gravity : int = 600
+var _jump_impulse : int = 300
+var _laser : PackedScene = preload("res://Laser.tscn")
+var _laserActive : bool = false
+var _laserTimer : float = 0
 
 onready var _sprite := find_node("AnimatedSprite")
 
@@ -14,8 +14,8 @@ func _process(delta):
 	if Input.is_action_pressed("laser") and _laserActive == false:
 		_laserActive = true
 		_laserTimer = 1.5
-		var _laserEyes0 = _laser.instance()
-		var _laserEyes1 = _laser.instance()
+		var _laserEyes0 : KinematicBody2D = _laser.instance()
+		var _laserEyes1 : KinematicBody2D = _laser.instance()
 		_laserEyes0.move_local_x(18)
 		_laserEyes0.move_local_y(-22)
 		_laserEyes1.move_local_x(50)
