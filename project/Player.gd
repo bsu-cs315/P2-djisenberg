@@ -20,12 +20,12 @@ func _process(delta):
 		_laserEyes0.move_local_y(-22)
 		_laserEyes1.move_local_x(50)
 		_laserEyes1.move_local_y(-22)
-		add_child(_laserEyes0)
-		add_child(_laserEyes1)
+		_sprite.add_child(_laserEyes0)
+		_sprite.add_child(_laserEyes1)
 	if _laserActive == true:
 		_laserTimer = _laserTimer - delta
 		if _laserTimer <= 0:
-			for node in get_children():
+			for node in _sprite.get_children():
 				for group in node.get_groups():
 					if group == "LaserGroup":
 						node.queue_free()
