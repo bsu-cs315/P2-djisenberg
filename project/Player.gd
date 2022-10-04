@@ -5,11 +5,15 @@ var _speed := 150
 var _gravity := 600
 var _jump_impulse := 300
 var _laser = preload("res://Laser.tscn")
+var _laserActive = false
+var _laserTimer = 0
 
 onready var _sprite := find_node("AnimatedSprite")
 
-func _process(_delta):
-	if Input.is_action_pressed("laser"):
+func _process(delta):
+	if Input.is_action_pressed("laser") and _laserActive == false:
+		_laserActive = true
+		_laserTimer = 1.5
 		var _laserEyes0 = _laser.instance()
 		var _laserEyes1 = _laser.instance()
 		_laserEyes0.move_local_x(18)
@@ -18,6 +22,14 @@ func _process(_delta):
 		_laserEyes1.move_local_y(-22)
 		add_child(_laserEyes0)
 		add_child(_laserEyes1)
+	if _laserActive == true:
+		_laserTimer = _laserTimer - delta
+		if _laserTimer <= 0:
+			for node in get_children():
+				for group in node.get_groups():
+					if group == "LaserGroup":
+						node.queue_free()
+			_laserActive = false
 
 func _ready():
 	pass
